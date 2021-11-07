@@ -12,7 +12,7 @@ module.exports = {
       options: {
         name: `notes`,
         path: `${__dirname}/src/notes/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
+        ignore: [`**/\.*`],
       },
     },
     {
@@ -20,7 +20,7 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/src/projects/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
+        ignore: [`**/\.*`],
       },
     },
     {
@@ -34,6 +34,17 @@ module.exports = {
         plugins: [],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+        ignore: [`**/\.*`],
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
   ],
   siteMetadata: {
     title: "Web Warrior",
