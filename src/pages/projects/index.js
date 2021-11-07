@@ -29,7 +29,7 @@ export default function Projects({data}) {
 // Exports Page Query
 export const query = graphql`
   query ProjectsPage {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
       totalCount
       nodes {
         frontmatter {
